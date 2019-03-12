@@ -36,7 +36,7 @@ describe('Callback review', function() {
 
   describe('getStatusCode', function() {
     var getStatusCode = callbackReview.getStatusCode;
-
+    
     // Nock is a super cool library that makes it easy to test
     // functions that send HTTP requests. Nock intercepts all outgoing
     // requests and allows us to send back any response we want instead.
@@ -49,6 +49,7 @@ describe('Callback review', function() {
       google.get('/').reply(200);
 
       getStatusCode('https://google.com', function() {
+    
         // If this asserion gets called, the callback was invoked correctly
         // Otherwise, this test will timeout after 2000ms
         expect(true).to.equal(true);
