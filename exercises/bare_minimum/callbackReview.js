@@ -30,6 +30,7 @@ var getStatusCode = function (url, cb) {
   });
 };
 
+
 // Export these functions so we can test them and reuse them in later exercises
 module.exports = {
   getStatusCode: getStatusCode,
